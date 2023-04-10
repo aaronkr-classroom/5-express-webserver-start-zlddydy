@@ -24,8 +24,8 @@ app.use(); // @TODO: homeController에서 logRequestPaths를 가져와 사용한
  * app.post(path, [callback])
  */
 app.get(); // @TODO: "/items/:vegetable"로의 GET 요청 처리 (p. 153)
-app.get(); // @TODO: "users/:username"로의 GET 요청 처리 (추가)
-app.get(); // @TODO: "courses/:courseId"로의 GET 요청 처리 (추가)
+app.get(); // @TODO: "/users/:username"로의 GET 요청 처리 (추가)
+app.get(); // @TODO: "/courses/:courseId"로의 GET 요청 처리 (추가)
 
 /**
  * 다른 라우트 수정
