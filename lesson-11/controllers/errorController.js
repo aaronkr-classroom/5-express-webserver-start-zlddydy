@@ -28,7 +28,7 @@ exports.resInternalError = (err, req, res, next) => {
     let errorCode = httpStatus.INTERNAL_SERVER_ERROR;
     res.status(errorCode);
     // res.send("500 | Server Error");
-    res.sendFile(`./public/${errorCode}.html, {
+    res.sendFile(`./public/${errorCode}.html`, {
     root: './'
- }`);
+ });
 }; // @TODO: 500 상태 코드로 모든 에러 처리

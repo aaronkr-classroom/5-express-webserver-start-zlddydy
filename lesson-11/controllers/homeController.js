@@ -12,12 +12,28 @@ exports.respondWithName1 = (req, res) => {
  * Listing 10.3
  */
 exports.getHome = (req, res) => {
-    res.render('index'); } // "/" index
-// exports.getContact = (req, res) => {} // "/contact" Get method
-// exports.postContact = (req, res) => {} // "/contact" POST method
-// exports.respondWithName = (req, res) => {
-//     let paramsName = req.params.myName; // 라우트의 매개변수 /name/:myName
-//     res.render('index', { 
+    res.render('index', {
+        name: "CMS",
+        people: {
+            usa: {
+                einstein: "Albert eistein",
+                musk: "Elon musk",
+                jobs: "Steve jobs"
+            },
+            korea: {
+                psy: "싸이다!",
+                kim: "김예수",
+            },
+            mexico: {
+                jesus: "Jesus Alvarez"
+            }
+        }
+    });
+};
+
+exports.respondWithName = (req, res) => {
+    let paramsName = req.params.myName;
+    res.render('index', {
         name: paramsName,
         people: {
             usa: {
